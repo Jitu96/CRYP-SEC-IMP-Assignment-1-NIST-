@@ -1,14 +1,14 @@
-def linear_complexity(self, bin_data, block_size=500):
+def linear_complexity(self, bin_data, block_size=1000):
     """
     The focus of this test is the length of a linear feedback shift register (LFSR). The purpose of this test is to
     determine whether or not the sequence is complex enough to be considered random. Random sequences are
     characterized by longer LFSRs. An LFSR that is too short implies non-randomness.
     :param bin_data: a binary string
-    :param block_size: the size of the blocks to divide bin_data into. Recommended block_size >= 500
+    :param block_size: the size of the blocks to divide bin_data into. Recommended block_size >= 1000
     :return:
     """
     dof = 6
-    piks = [0.01047, 0.03125, 0.125, 0.5, 0.25, 0.0625, 0.020833]
+    piks = [0.01057, 0.03105, 0.135, 0.50, 0.25, 0.0635, 0.0208333]
 
     t2 = (block_size / 3.0 + 2.0 / 9) / 2 ** block_size
     mean = 0.5 * block_size + (1.0 / 36) * (9 + (-1) ** (block_size + 1)) - t2
